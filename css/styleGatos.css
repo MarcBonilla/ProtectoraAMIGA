@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .back {
+    position: relative;
+    max-width: 30px;
+    top: 5px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    padding: 15px;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+.perros {
+    display: inline-block;
+    background: #1F0400;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.exoticos {
+    display: inline-block;
+    background: #A79B7B;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+/* Animal */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: transitionIn 0.5s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    width: 50%;
+    height: 600px;
+    border-radius: 8px;
+}
+
+.right {
+    width: 50%;
+    min-height: 375px;
+    background-color: #562822;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+    margin-left: -50px;
+    font-family: "Montserrat";
+}
+
+.right h1 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.right p {
+    margin: 20px 0;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.right a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .left {
+        width: 100%;
+        height: 400px;
+    }
+
+    .right {
+        width: 90%;
+        margin: 0;
+        margin-top: -100px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header .back {
+        top: 40px;
+    }
+
+    header img {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        max-width: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header ul li a {
+        font-size: 1.5em;
+    }
+
+    header ul.navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        z-index: 10;
+        animation: transitionIn 0.5s;
+    }
+
+    .toggle {
+        position: relative;
+        top: 40px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(../img/menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+    }
+
+    .toggle.active {
+        position: fixed;
+        top: 60px;
+        right: 40px;
+        background: url(../img/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+}
+

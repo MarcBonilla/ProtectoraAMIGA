@@ -1,0 +1,99 @@
+@keyframes slowBlur {
+    0% {
+        filter: blur(5px);
+    }
+
+    50% {
+        filter: blur(10px);
+    }
+
+    100% {
+       filter: blur(20px);
+    }
+}
+
+@keyframes slowUnBlur {
+    0% {
+        filter: blur(20px);
+    }
+
+    50% {
+        filter: blur(10px);
+    }
+
+    100% {
+       filter: blur(5px);
+    }
+}
+
+.cont {
+    position: relative;
+    animation-name: slowUnBlur;
+    animation-duration: .15s;
+}
+.cont#blur.active {
+    animation-name: slowBlur;
+    animation-duration: .15s;
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, -30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
+}
+#popup.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s; 
+}
+
+.field {
+    border: solid 2px black;
+    border-radius: 4px;
+    padding-left: 3px;
+    height: 3%;
+    transition: all .5s;
+}
+
+.field:focus {
+    transform: translateY(-2px);
+}
+
+.submit {
+    position: absolute;
+    left: 28.5%;
+    border: solid 2px black;
+    border-radius: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 25px;
+    transition: all .5s;
+    background-color: #fff;
+}
+
+.close {
+    position: absolute;
+    left: 57.5%;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 25px;
+    transition: all .5s;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
