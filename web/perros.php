@@ -40,7 +40,7 @@
                         <li><a href="../php/logout.php">Logout</a></li>
                         <li><a href="../php/animales.php" id="panel">Panel de Control</a></li>
                     <?php else: ?>
-                        <li><a href="../php/login.php" id="login">Iniciar Sessión</a></li>
+                        <li><a href="../php/login.php" id="login">Iniciar Sesión</a></li>
                     <?php endif; ?>
                 </ul>
             </header>
